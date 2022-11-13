@@ -1,9 +1,10 @@
 import './App.scss';
+import LogIn from './pages/LogIn';
 
 function App() {
   return (
     <div className="App">
-      <h1>Add codes</h1>
+      <LogIn/>
     </div>
   );
 }

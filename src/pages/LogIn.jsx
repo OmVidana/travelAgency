@@ -1,8 +1,7 @@
 import './LogIn.scss';
-
 function LogIn() {
     return (
-        <div>
+        <div className='login-page'>
             <p1>Hola!</p1>
         </div>
     );

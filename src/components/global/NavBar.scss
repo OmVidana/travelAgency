@@ -1,6 +1,71 @@
 @import '../../index.scss';
 
-@media screen and (min-width : 910px) {
+.navBar {
+    position: sticky;
+    top: 0;
+
+    .navBar-icons {
+        color: $light-black;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+
+    .navBar-spaces {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+        padding: 0 2rem;
+        background-color: $main-white;
+        box-shadow: 0 0.2rem 0.3rem -0.2rem rgba($color: $black, $alpha: 0.5);
+        width: 100%;
+        height: 5rem;
+
+        .navBar-space-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            white-space: nowrap;
+            color: $black;
+            
+            .navBar-main-icon {
+                padding: 0 1rem;
+            }
+        }
+    }
+    .navBar-space-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: auto;
+        
+        .navBar-space-elements {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            list-style: none;
+            margin-right: 5%;
+            
+            .navBar-space-page {
+                text-decoration: none;
+                color: $light-black;
+                white-space: nowrap;
+            }
+        }
+        .login-button {
+            text-decoration: none;
+            white-space: nowrap;
+            color: $light-black;
+            padding: 10px 40px;
+            border: 0.2rem solid $main-blue;
+            border-radius: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width : $computers) {
     .navBar {
         position: sticky;
         top: 0;
@@ -34,21 +99,24 @@
                 }
             }
         }
-    
-        .navBar-space-elements {
-            display: grid;
-            grid-template-columns: repeat(4, auto);
-            grid-gap: 2.5rem;
-            justify-content: center;
+        .navBar-space-content{
+            display: flex;
+            flex-direction: row;
             align-items: center;
-            list-style: none;
+            justify-content: flex-end;
+            width: auto;
             
-            .navBar-space-page {
-                text-decoration: none;
-                color: $light-black;
-                white-space: nowrap;
+            .navBar-space-elements {
+                display: none;
+                
+                .navBar-space-page {
+                    display: none;
+                }
             }
             .login-button {
+                text-decoration: none;
+                white-space: nowrap;
+                color: $light-black;
                 padding: 10px 30px;
                 border: 0.2rem solid $main-blue;
                 border-radius: 2rem;
@@ -57,16 +125,70 @@
     }
 }
 
-@media screen and (max-width : 910px) {
+@media screen and (min-width : $large) {
     .navBar {
-        z-index: 99;
-        
-        .navBar-spaces-elements {
+        position: sticky;
+        top: 0;
+    
+        .navBar-icons {
+            color: $light-black;
+            margin-left: 4rem;
+            margin-right: 2rem;
+        }
+    
+        .navBar-spaces {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            background-color: blue;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 3rem;
+            padding: 0 4rem;
+            background-color: $main-white;
+            box-shadow: 0 0.4rem 0.6rem -0.4rem rgba($color: $black, $alpha: 0.5);
+            width: 100%;
+            height: 10rem;
+    
+            .navBar-space-main {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-decoration: none;
+                white-space: nowrap;
+                color: $black;
+                
+                .navBar-main-icon {
+                    padding: 0 2rem;
+                }
+            }
+        }
+    
+        .navBar-space-content{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            width: auto;
+            
+            .navBar-space-elements {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                list-style: none;
+                
+                .navBar-space-page {
+                    text-decoration: none;
+                    color: $light-black;
+                    white-space: nowrap;
+                }
+            }
+            .login-button {
+                text-decoration: none;
+                white-space: nowrap;
+                color: $light-black;
+                padding: 10px 80px;
+                border: 0.4rem solid $main-blue;
+                border-radius: 4rem;
+            }
         }
     }
-    
 }
+

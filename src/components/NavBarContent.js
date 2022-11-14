@@ -16,10 +16,5 @@ export const NavBarContent = [
         url: '/signup',
         className: 'navBar-space-page navBar-space-page-mobile',
         icon: 'navBar-icons fa-solid fa-user'
-    },
-    {
-        title: 'Log In',
-        url: '/login',
-        className: 'navBar-space-page login-button'
     }
 ]

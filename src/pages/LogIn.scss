@@ -1,2 +1,25 @@
 @import '../index.scss';
 
+body {
+    background-color: $light-black;
+}
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background-color: $main-white;
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+    

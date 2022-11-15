@@ -1,28 +1,32 @@
 import NavBar from '../components/global/NavBar';
 import './FlightSearch.css'
+import React, { useState } from 'react';
+
 
 function Home() {
+    const [title, setTitle] = useState('')
+    const [llegada, setLLegada] = useState('None')
+    const [fIda, setfIda] = useState('None')
+    const [fVuelta, setfVuelta] = useState('None')
+    const [aerolinea, setAerolinea] = useState('None')
+    const [adultos, setAdultos] = useState('None')
+
     var jsonData1 = {
 
-        "name": "alan",
-        "age": 23,
-        "username": "aturing"
+        "Salida": title,
+        "Llegada": llegada,
+        'FechaIda': fIda,
+        'FechaVuelta': fVuelta,
+        'Aerolinea': aerolinea,
+        'Adultos': adultos
 
     }
 
-    var jsonData2 = {
-
-        "name": "john",
-        "age": 29,
-        "username": "__john__"
-
-    }
 
     function handleClick() {
 
         var formData = new FormData();
         formData.append('json1', JSON.stringify(jsonData1));
-        formData.append('json2', JSON.stringify(jsonData2));
 
         // Send data to the backend via POST
         fetch(' http://127.0.0.1:8000/prueba/', {
@@ -44,7 +48,7 @@ function Home() {
                         <div id="main__search">
                             <div className="inp">
                                 <label htmlFor="">Salida</label>
-                                <input type="text" name="" id=""></input>
+                                <input type="text" name="" id="" onChange={event => setTitle(event.target.value)}></input>
                             </div>
                             <div className="svg-cont">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arrows" width="44" height="44"
@@ -59,7 +63,7 @@ function Home() {
                             </div>
                             <div className="inp">
                                 <label htmlFor="">Llegada</label>
-                                <input type="text" name="" id=""></input>
+                                <input type="text" name="" id="" onChange={event => setLLegada(event.target.value)}></input>
                             </div>
                         </div>
                         <button id="search" onClick={handleClick}>Buscar</button>
@@ -73,19 +77,19 @@ function Home() {
                         <div id="options">
                             <div className="inp">
                                 <label htmlFor="">Fecha de ida</label>
-                                <input type="text" name="" id=""></input>
+                                <input type="date" name="" id="" onChange={event => setfIda(event.target.value)}></input>
                             </div>
                             <div className="inp">
                                 <label htmlFor="">Fecha de vuelta</label>
-                                <input type="text" name="" id=""></input>
+                                <input type="date" name="" id="" onChange={event => setfVuelta(event.target.value)}></input>
                             </div>
                             <div className="inp">
                                 <label htmlFor="">Aerolinea</label>
-                                <input type="text" name="" id=""></input>
+                                <input type="text" name="" id="" onChange={event => setAerolinea(event.target.value)}></input>
                             </div>
                             <div className="inp">
                                 <label htmlFor="">Adultos</label>
-                                <input type="text" name="" id=""></input>
+                                <input type="text" name="" id="" onChange={event => setAdultos(event.target.value)}></input>
                             </div>
                         </div>
                     </div>

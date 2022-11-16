@@ -30,7 +30,7 @@ nav menu {
 }
 
 main, body {
-    overflow: hidden;
+    overflow:scroll;
 }
 
 .inp {

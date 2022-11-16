@@ -2,6 +2,11 @@ import NavBar from '../components/global/NavBar';
 import './FlightSearch.css'
 import React, { useState } from 'react';
 import Field from "../components/Search/Field";
+// import OptionField from "../components/Search/OptionField";
+// import {Autocomplete} from "@mui/material";
+import OptionField from "../components/Search/OptionField";
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 
 
 function Home() {
@@ -37,6 +42,7 @@ function Home() {
             body: formData // body data type must match "Content-Type" header
 
         })
+
     }
 
     return (
@@ -47,7 +53,8 @@ function Home() {
                 <form>
                     <div id="main__search">
                         <div id="main__search">
-                            <Field text="Salida" type="text" state= {setTitle} />
+                            {/*<Field text="Salida" type="text" state= {setTitle} />*/}
+                            <OptionField/>
                             <div className="svg-cont">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arrows" width="44" height="44"
                                      viewBox="0 0 24 24" stroke-width="1.5" stroke="#A8A8A8" fill="none"

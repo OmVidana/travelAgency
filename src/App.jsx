@@ -1,5 +1,5 @@
 import { Route, Router, Switch, Redirect } from 'wouter';
-import SignUp from './pages/SignUp';
+import SignUp from './pages/Signup';
 import LogIn from './pages/LogIn';
 import Home from './pages/Home';
 import Hoteles from './pages/Hoteles';
@@ -17,7 +17,7 @@ function App() {
           <Route path='/home'><Home/></Route>
           <Route path='/hoteles'><Hoteles/></Route>
           <Route path='/search'><FlightSearch/></Route>
-          {/* <Route path='/signup'><SignUp/></Route> */}
+          <Route path='/Signup'><SignUp/></Route>
           <Route path='/login'><LogIn/></Route>
         </Switch>
       </Router>

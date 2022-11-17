@@ -1,6 +1,12 @@
 import NavBar from '../components/global/NavBar';
 import './FlightSearch.css'
 import React, { useState } from 'react';
+import Field from "../components/Search/Field";
+// import OptionField from "../components/Search/OptionField";
+// import {Autocomplete} from "@mui/material";
+import OptionField from "../components/Search/OptionField";
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 
 
 function Home() {
@@ -36,6 +42,7 @@ function Home() {
             body: formData // body data type must match "Content-Type" header
 
         })
+
     }
 
     return (
@@ -46,10 +53,8 @@ function Home() {
                 <form>
                     <div id="main__search">
                         <div id="main__search">
-                            <div className="inp">
-                                <label htmlFor="">Salida</label>
-                                <input type="text" name="" id="" onChange={event => setTitle(event.target.value)}></input>
-                            </div>
+                            {/*<Field text="Salida" type="text" state= {setTitle} />*/}
+                            <OptionField/>
                             <div className="svg-cont">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arrows" width="44" height="44"
                                      viewBox="0 0 24 24" stroke-width="1.5" stroke="#A8A8A8" fill="none"
@@ -61,10 +66,7 @@ function Home() {
                                     <path d="M18 20l3 -3l-3 -3"/>
                                 </svg>
                             </div>
-                            <div className="inp">
-                                <label htmlFor="">Llegada</label>
-                                <input type="text" name="" id="" onChange={event => setLLegada(event.target.value)}></input>
-                            </div>
+                            <Field text="LLegada" type="text" state= {setLLegada} />
                         </div>
                         <button id="search" onClick={handleClick}>Buscar</button>
                     </div>
@@ -75,22 +77,10 @@ function Home() {
                     <div id="extra__options">
                         <h3>Busqueda Avanzada</h3>
                         <div id="options">
-                            <div className="inp">
-                                <label htmlFor="">Fecha de ida</label>
-                                <input type="date" name="" id="" onChange={event => setfIda(event.target.value)}></input>
-                            </div>
-                            <div className="inp">
-                                <label htmlFor="">Fecha de vuelta</label>
-                                <input type="date" name="" id="" onChange={event => setfVuelta(event.target.value)}></input>
-                            </div>
-                            <div className="inp">
-                                <label htmlFor="">Aerolinea</label>
-                                <input type="text" name="" id="" onChange={event => setAerolinea(event.target.value)}></input>
-                            </div>
-                            <div className="inp">
-                                <label htmlFor="">Adultos</label>
-                                <input type="text" name="" id="" onChange={event => setAdultos(event.target.value)}></input>
-                            </div>
+                            <Field text="Fecha de salida" type="text" state= {setfIda} />
+                            <Field text="Fecha de llegada" type="text" state= {setfVuelta} />
+                            <Field text="Aerolinea" type="text" state= {setAerolinea} />
+                            <Field text="Adultos" type="text" state= {setAdultos} />
                         </div>
                     </div>
                 </form>

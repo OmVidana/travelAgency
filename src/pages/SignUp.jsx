@@ -11,9 +11,17 @@ function Signup() {
     <MainContainer>
       <WelcomeText>Sign Up</WelcomeText>
       <InputContainer>
-        <Input type="text" placeholder="Email" />
-        <Input type="password" placeholder="Password" />
+        <Input type="email" placeholder="Correo" />
+        <Input type="password" placeholder="Contraseña" />
+        <Input type="text" placeholder="Nombre" />
       </InputContainer>
+
+      <InputContainer>
+        <Input type="text" placeholder="Pais" />
+        <Input type="text" placeholder="Ciudad" />
+        <Input type="text" placeholder="Fecha de Nacimiento" />
+      </InputContainer>
+      
       <ButtonContainer>
         <Button content="Sign Up" />
       </ButtonContainer>
@@ -104,6 +112,12 @@ const MainContainer = styled.div`
 const WelcomeText = styled.h2`
   margin: 3rem 0 2rem 0;
 `;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 
 const InputContainer = styled.div`
   display: flex;

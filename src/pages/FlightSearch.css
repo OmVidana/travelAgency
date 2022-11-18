@@ -33,6 +33,10 @@ main, body {
     overflow:scroll;
 }
 
+main {
+    background-color: white;
+}
+
 .inp {
     display: flex;
     flex-direction: column;

@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 
 
-function Home() {
+function Home(props) {
     const [title, setTitle] = useState('')
     const [llegada, setLLegada] = useState('None')
     const [fIda, setfIda] = useState('None')
@@ -54,7 +54,7 @@ function Home() {
                     <div id="main__search">
                         <div id="main__search">
                             {/*<Field text="Salida" type="text" state= {setTitle} />*/}
-                            <OptionField/>
+                            <OptionField text="Salida" state={setTitle} />
                             <div className="svg-cont">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arrows" width="44" height="44"
                                      viewBox="0 0 24 24" stroke-width="1.5" stroke="#A8A8A8" fill="none"
@@ -66,7 +66,7 @@ function Home() {
                                     <path d="M18 20l3 -3l-3 -3"/>
                                 </svg>
                             </div>
-                            <Field text="LLegada" type="text" state= {setLLegada} />
+                            <OptionField text="Llegada" state={setLLegada} />
                         </div>
                         <button id="search" onClick={handleClick}>Buscar</button>
                     </div>

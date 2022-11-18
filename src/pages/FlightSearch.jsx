@@ -7,20 +7,26 @@ import Field from "../components/Search/Field";
 import OptionField from "../components/Search/OptionField";
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import { redirect } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
-function Home() {
+function Home(props) {
     const [title, setTitle] = useState('')
     const [llegada, setLLegada] = useState('None')
     const [fIda, setfIda] = useState('None')
     const [fVuelta, setfVuelta] = useState('None')
     const [aerolinea, setAerolinea] = useState('None')
     const [adultos, setAdultos] = useState('None')
+    const navigate = useNavigate();
+
+
 
     var jsonData1 = {
 
-        "Salida": title,
-        "Llegada": llegada,
+        "Salida": title.split(',')[0],
+        "Llegada": llegada.split(',')[0],
         'FechaIda': fIda,
         'FechaVuelta': fVuelta,
         'Aerolinea': aerolinea,
@@ -29,19 +35,23 @@ function Home() {
     }
 
 
-    function handleClick() {
-
+    function handleClick(event) {
         var formData = new FormData();
+        event.preventDefault();
         formData.append('json1', JSON.stringify(jsonData1));
 
         // Send data to the backend via POST
-        fetch(' http://127.0.0.1:8000/prueba/', {
+        fetch(' http://127.0.0.1:8000/flightoptions/', {
 
             method: 'POST',
             mode: 'cors',
             body: formData // body data type must match "Content-Type" header
-
         })
+            .then(response => response.json())
+            .then(data => navigate('/results', {state: data}));
+            // .then(data => console.log(data['data']));
+        //     .then(data => setTitle(data['json1']));
+        // return redirect("/home");
 
     }
 
@@ -54,7 +64,7 @@ function Home() {
                     <div id="main__search">
                         <div id="main__search">
                             {/*<Field text="Salida" type="text" state= {setTitle} />*/}
-                            <OptionField/>
+                            <OptionField text="Salida" state={setTitle} />
                             <div className="svg-cont">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arrows" width="44" height="44"
                                      viewBox="0 0 24 24" stroke-width="1.5" stroke="#A8A8A8" fill="none"
@@ -66,7 +76,7 @@ function Home() {
                                     <path d="M18 20l3 -3l-3 -3"/>
                                 </svg>
                             </div>
-                            <Field text="LLegada" type="text" state= {setLLegada} />
+                            <OptionField text="Llegada" state={setLLegada} />
                         </div>
                         <button id="search" onClick={handleClick}>Buscar</button>
                     </div>
@@ -77,9 +87,7 @@ function Home() {
                     <div id="extra__options">
                         <h3>Busqueda Avanzada</h3>
                         <div id="options">
-                            <Field text="Fecha de salida" type="text" state= {setfIda} />
-                            <Field text="Fecha de llegada" type="text" state= {setfVuelta} />
-                            <Field text="Aerolinea" type="text" state= {setAerolinea} />
+                            <Field text="Fecha de salida" type="date" state= {setfIda} />
                             <Field text="Adultos" type="text" state= {setAdultos} />
                         </div>
                     </div>

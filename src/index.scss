@@ -25,3 +25,9 @@ $large: 2560px;
   font-family: $main-font;
   color: $black; 
 }
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+}

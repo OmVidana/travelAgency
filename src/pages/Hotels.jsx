@@ -1,13 +1,13 @@
-import './Hoteles.scss';
+import './Hotels.scss';
 import NavBar from '../components/global/NavBar';
 
-function Hoteles() {
+function Hotels() {
     return (
-        <div className='hoteles-page'>
+        <div className='hotels-page'>
             <NavBar/>
             <p1>Hola!</p1>
         </div>
     );
 }
 
-export default Hoteles;
+export default Hotels;

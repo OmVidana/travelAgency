@@ -1,8 +1,8 @@
 // import { Route, Router, Switch, Redirect } from 'wouter';
-import SignUp from './pages/Signup';
+import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
 import Home from './pages/Home';
-import Hoteles from './pages/Hoteles';
+import Hotels from './pages/Hotels';
 // import Fligth_search from "./pages/FlightSearch";
 import FlightSearch from "./pages/FlightSearch";
 import Results from "./pages/Results";
@@ -15,9 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/search" element={<FlightSearch/>} />
-          <Route path="/hoteles" element={<Hoteles/>} />
+          <Route path="/hoteles" element={<Hotels/>} />
           <Route path="/results" element={<Results/>} />
           <Route path="/login" element={<LogIn/>} />
+          <Route path="/signup" element={<SignUp/>} />
         </Routes>
       </BrowserRouter>
     // <>

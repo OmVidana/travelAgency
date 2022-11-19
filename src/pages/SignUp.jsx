@@ -5,7 +5,7 @@ import Input from "../components/global/Input";
 import signupimg from "../components/global/background.jpg";
 import { FaFacebookF, FaInstagram, FaTwitter, FaGoogle } from "react-icons/fa";
 
-function Signup() {
+function SignUp() {
   return (
     <Bodysign>
     <MainContainer>
@@ -161,4 +161,4 @@ const ForgotPassword = styled.h4`
   cursor: pointer;
 `;
 
-export default Signup;
+export default SignUp;

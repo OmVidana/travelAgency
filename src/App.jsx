@@ -8,6 +8,9 @@ import FlightSearch from "./pages/FlightSearch";
 import Results from "./pages/Results";
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MyAccount from './pages/MyAccount';
+import AccountFlights from './pages/AccountFlights';
+import AccountHotels from './pages/AccountHotels';
 
 function App() {
   return (
@@ -19,6 +22,10 @@ function App() {
           <Route path="/results" element={<Results/>} />
           <Route path="/login" element={<LogIn/>} />
           <Route path="/signup" element={<SignUp/>} />
+          <Route path="/micuenta" element={<MyAccount/>} />
+          <Route path="/micuenta/vuelos" element={<AccountFlights/>} />
+          <Route path="/micuenta/hoteles" element={<AccountHotels/>} />
+
         </Routes>
       </BrowserRouter>
     // <>

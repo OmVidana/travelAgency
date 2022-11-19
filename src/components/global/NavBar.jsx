@@ -5,7 +5,7 @@ function NavBar() {
     return (
         <div className='navBar'>
             <nav className='navBar-spaces'>
-                <a className='navBar-space-main' href='/home'>Yorick Travels <i className='navBar-main-icon fa-solid fa-plane-up'></i></a>
+                <a className='navBar-space-main' href='/'>Yorick Travels <i className='navBar-main-icon fa-solid fa-plane-up'></i></a>
                 <div className='navBar-space-content'>
                     <ul className='navBar-space-elements'>
                         {NavBarContent.map((item, index) => {

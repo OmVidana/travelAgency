@@ -29,10 +29,6 @@ nav menu {
     margin-right: 30px;
 }
 
-main, body {
-    overflow:scroll;
-}
-
 main {
     background-color: white;
 }

@@ -1,0 +1,60 @@
+@import '../index.scss';
+
+.accountflight-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 200px;
+    width: 600px;
+    background-color: $main-white;
+
+    .accountflight-origin {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        
+        p {
+            color: $light-grey;
+        }
+    }
+
+    .accountflight-arrow {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .accountflight-destination {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: $light-grey;
+        }
+    }
+    .accountflight-price {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        
+        p {
+            color: $main-blue;
+            font-size: 40px;
+            font-weight: 900;
+        }
+    }
+}

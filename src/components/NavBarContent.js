@@ -1,7 +1,7 @@
 export const NavBarContent = [
     {
         title: 'Home',
-        url: '/home',
+        url: '/',
         className: 'navBar-space-page',
         icon: 'navBar-icons fa-sharp fa-solid fa-house'
     },

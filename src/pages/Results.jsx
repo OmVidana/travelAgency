@@ -1,6 +1,6 @@
 // import './Home.scss';
 import './prueba.css'
-import Card from "../components/Results/Card";
+import Card from "../components/Results/FlightCard";
 import { useLocation } from 'react-router-dom';
 
 function Results(props) {

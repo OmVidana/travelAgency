@@ -3,12 +3,12 @@ import "./AccountHotels.scss";
 
 function AccountHotels() {
     return (
-        <div className="accounthotels-page">
+        <>
             <NavBar/>
-            <div className="account-container">
-            
+            <div className="accounthotels-page">
+                <h1>WIP</h1>
             </div>
-        </div>
+        </>
     );
 }
 

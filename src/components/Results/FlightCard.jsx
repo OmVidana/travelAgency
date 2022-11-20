@@ -19,8 +19,8 @@ function FlightCard(props) {
             <div className='flight-price'>
                 <p>$150</p>
                 <button className="buy-button flight-button" type="button">Comprar</button>
-                <button className="cancel-button flight-button" type="button">Cancelar</button>
-                <button className="modify-button flight-button" type="button">Modificar</button>
+                <button className="cancel-button flight-button" type="button" hidden>Cancelar</button>
+                <button className="modify-button flight-button" type="button" hidden>Modificar</button>
             </div>
         </div>
     );

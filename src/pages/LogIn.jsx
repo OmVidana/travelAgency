@@ -1,13 +1,17 @@
 import './LogIn.scss';
+import React, {useContext}  from "react";
+import AuthContext from "../context/AuthContext";
+import {Navigate} from "react-router-dom";
 
 function LogIn() {
+    let {loginUser} = useContext(AuthContext)
     return (
         <div className="login-page">
             <div className="login-container">
-                <form className="login-form">
+                <form className="login-form" onSubmit={loginUser}>
                     <h1>Log In</h1>
                     <input
-                        type="email"
+                        type="text"
                         placeholder="Correo"
                         name="email"
                         required

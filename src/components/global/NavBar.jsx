@@ -1,6 +1,10 @@
 import './NavBar.scss'
+import {useContext} from "react";
+import AuthContext from "../../context/AuthContext";
 
 function NavBar() {
+    let {user} = useContext(AuthContext)
+    console.log(user)
     return (
         <div className='navBar'>
             <nav className='navBar-spaces'>
@@ -20,7 +24,8 @@ function NavBar() {
                             <a className="navBar-space-page" href="/signup"><i className="navBar-icons fa-solid fa-user"></i>Sign Up</a>
                         </li>
                     </ul>
-                    <a className='login-button' href='/login'>Log In</a>
+                    {user ? <a className='login-button' href='/micuenta'>{user.username}</a> : <a className='login-button' href='/login'>Log In</a>}
+                    {/*<a className='login-button' href='/login'>Log In</a>*/}
                 </div>
             </nav>
         </div>

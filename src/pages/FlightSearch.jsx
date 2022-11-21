@@ -20,17 +20,21 @@ function Home(props) {
     const [adultos, setAdultos] = useState("None");
     const navigate = useNavigate();
 
-    var jsonData1 = {
-        Salida: title.split(",")[0],
-        Llegada: llegada.split(",")[0],
-        FechaIda: fIda,
-        FechaVuelta: fVuelta,
-        Aerolinea: aerolinea,
-        Adultos: adultos,
-    };
+
+    let jsonData1 = {
+
+        "Salida": title.split(',')[0],
+        "Llegada": llegada.split(',')[0],
+        'FechaIda': fIda,
+        'FechaVuelta': fVuelta,
+        'Aerolinea': aerolinea,
+        'Adultos': adultos
+
+    }
+
 
     function handleClick(event) {
-        var formData = new FormData();
+        let formData = new FormData();
         event.preventDefault();
         formData.append("json1", JSON.stringify(jsonData1));
 

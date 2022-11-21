@@ -15,9 +15,6 @@ function NavBar() {
                             <a className="navBar-space-page" href="/"><i className="navBar-icons fa-sharp fa-solid fa-house"></i>Home</a>
                         </li>
                         <li>
-                            <a className="navBar-space-page" href="/search"><i className="navBar-icons fa-sharp fa-solid fa-search"></i>Vuelos</a>
-                        </li>
-                        <li>
                             <a className="navBar-space-page" href="/hoteles"><i className="navBar-icons fa-solid fa-hotel"></i>Hoteles</a>
                         </li>
                         <li>

@@ -22,8 +22,7 @@ function Home(props) {
     const navigate = useNavigate();
 
 
-
-    var jsonData1 = {
+    let jsonData1 = {
 
         "Salida": title.split(',')[0],
         "Llegada": llegada.split(',')[0],
@@ -36,7 +35,7 @@ function Home(props) {
 
 
     function handleClick(event) {
-        var formData = new FormData();
+        let formData = new FormData();
         event.preventDefault();
         formData.append('json1', JSON.stringify(jsonData1));
 

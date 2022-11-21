@@ -7,10 +7,10 @@ const AuthContext = createContext();
 export default AuthContext;
 
 export const AuthProvider = ({children})=> {
-    let [authTokens, setAuthTokens] = useState(null)
-    let [user, setUser] = useState(null)
-    let navigate = useNavigate()
 
+    let [authTokens, setAuthTokens] = useState(()=>localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')):null)
+    let [user, setUser] = useState(() => localStorage.getItem('authTokens') ? jwtDecode(localStorage.getItem('authTokens')):null)
+    let navigate = useNavigate()
     let loginUser = async (e )=> {
         e.preventDefault()
         console.log('Submiteada')
@@ -27,6 +27,7 @@ export const AuthProvider = ({children})=> {
                     data.then((values) => {
                         setAuthTokens(values)
                         setUser(jwtDecode(values.access))
+                        localStorage.setItem('authTokens', JSON.stringify(values))
                         navigate('/')
                     })
                 }else{
@@ -36,10 +37,17 @@ export const AuthProvider = ({children})=> {
         // let data = (await response).json()
 
     }
+    let logotUser = () => {
+        setAuthTokens(null)
+        setUser(null)
+        localStorage.removeItem('authTokens')
+        navigate('/login')
+    }
 
     let contextData = {
         user:user,
-        loginUser:loginUser
+        loginUser:loginUser,
+        logoutUser:logotUser
     }
 
     return (

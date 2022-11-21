@@ -6,7 +6,7 @@ import AuthContext from "../context/AuthContext";
 function MyAccount() {
     let {name} = useContext(AuthContext)
     return (
-        <div className="myaccount-page">
+        <>
             <NavBar/>
             <h1>Hola {name}</h1>
             <div className="account-container">
@@ -37,7 +37,7 @@ function MyAccount() {
                     <a href="/micuenta/hoteles" className="account-consults">Reservaciones Pendientes.</a>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

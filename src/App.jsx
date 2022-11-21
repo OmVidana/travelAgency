@@ -14,6 +14,7 @@ import AccountFlights from "./pages/AccountFlights";
 import AccountHotels from "./pages/AccountHotels";
 
 import {AuthProvider} from './context/AuthContext'
+import FlightSearch from "./pages/FlightSearch";
 
 function App() {
   return (

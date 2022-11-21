@@ -45,7 +45,7 @@ function Home(props) {
             body: formData, // body data type must match "Content-Type" header
         })
             .then((response) => response.json())
-            .then((data) => navigate("/vuelos", { state: data }));
+            .then((data) => navigate("/results", { state: data }));
         // .then(data => console.log(data['data']));
         //     .then(data => setTitle(data['json1']));
         // return redirect("/home");

@@ -1,10 +1,14 @@
 import NavBar from "../components/global/NavBar";
 import "./MyAccount.scss";
+import React, {useContext} from "react";
+import AuthContext from "../context/AuthContext";
 
 function MyAccount() {
+    let {name} = useContext(AuthContext)
     return (
         <div className="myaccount-page">
             <NavBar/>
+            <h1>Hola {name}</h1>
             <div className="account-container">
                 <i className="fa-solid fa-circle-user user-icon"></i>
                 <form>

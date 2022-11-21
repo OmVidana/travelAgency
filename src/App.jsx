@@ -3,6 +3,8 @@ import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
 import Home from './pages/Home';
 import Hotels from './pages/Hotels';
+import PrivateRoute from './utils/PrivateRoute'
+
 // import Fligth_search from "./pages/FlightSearch";
 import FlightSearch from "./pages/FlightSearch";
 import Results from "./pages/Results";
@@ -12,9 +14,12 @@ import MyAccount from './pages/MyAccount';
 import AccountFlights from './pages/AccountFlights';
 import AccountHotels from './pages/AccountHotels';
 
+import {AuthProvider} from './context/AuthContext'
+
 function App() {
   return (
       <BrowserRouter>
+        <AuthProvider>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/search" element={<FlightSearch/>} />
@@ -22,26 +27,12 @@ function App() {
           <Route path="/results" element={<Results/>} />
           <Route path="/login" element={<LogIn/>} />
           <Route path="/signup" element={<SignUp/>} />
-          <Route path="/micuenta" element={<MyAccount/>} />
+           <Route path="/micuenta" element={<PrivateRoute><MyAccount/></PrivateRoute>}/>
           <Route path="/micuenta/vuelos" element={<AccountFlights/>} />
           <Route path="/micuenta/hoteles" element={<AccountHotels/>} />
-
         </Routes>
+        </AuthProvider>
       </BrowserRouter>
-    // <>
-    //   <Router>
-    //     <Switch>
-    //       <Route path='/'>
-    //         <Redirect to='home'/>
-    //       </Route>
-    //       <Route path='/home'><Home/></Route>
-    //       <Route path='/hoteles'><Hoteles/></Route>
-    //       <Route path='/search'><FlightSearch/></Route>
-    //       <Route path='/results'><Results/></Route>
-    //       <Route path='/login'><LogIn/></Route>
-    //     </Switch>
-    //   </Router>
-    // </>
   );
 }
 

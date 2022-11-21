@@ -1,7 +1,8 @@
 // import './Home.scss';
-import './prueba.css'
-import Card from "../components/Results/FlightCard";
+import './Results.scss'
+import FlightCard from "../components/Results/FlightCard";
 import { useLocation } from 'react-router-dom';
+import NavBar from '../components/global/NavBar';
 
 function Results(props) {
     // let data = props.data['data']
@@ -9,17 +10,21 @@ function Results(props) {
     const { data } = state;
 
     return (
-        <div id="container">
-              {data.map((flight) => (
-                  <Card
+        <>
+            <NavBar/>
+            <div className='results-page'>   
+            {data.map((flight, index) => (
+                <FlightCard
+                    key={index}
                     arrival={flight['salida']}
                     departure={flight['llegada']}
                     arrivalt={flight['tsalida']}
                     departuret={flight['tllegada']}
                     price={flight['precio']}
-                  />
-              ))}
-        </div>
+                />
+             ))}
+            </div>
+        </>
     );
 }
 

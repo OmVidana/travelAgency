@@ -4,23 +4,23 @@ function FlightCard(props) {
     return (
         <div className="flight-container">
             <div className='flight-origin'>
-                <p>GDL</p>
-                <p>14:30</p>
+                <p id="dest">{props.departure}</p>
+                <p id="arr">{props.arrival}</p>
                 <img src='' alt='Airlane Logo'/>
             </div>
             <div className='flight-arrow'>
-                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                <span><i className="fa-solid fa-arrow-right-long"></i></span>
             </div>
             <div className='flight-destination'>
-                <p>CDMX</p>
-                <p>10:30</p>
+                <p id="destime">{props.departuret}</p>
+                <p id="destime">{props.arrivalt}</p>
                 <img src='' alt='Airlane Logo'/>
             </div>
             <div className='flight-price'>
-                <p>$150</p>
+                <p>{props.price}</p>
                 <button className="buy-button flight-button" type="button">Comprar</button>
-                <button className="cancel-button flight-button" type="button" hidden>Cancelar</button>
-                <button className="modify-button flight-button" type="button" hidden>Modificar</button>
+                <button className="cancel-button flight-button" type="button">Cancelar</button>
+                <button className="modify-button flight-button" type="button">Modificar</button>
             </div>
         </div>
     );

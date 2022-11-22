@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<FlightSearch/>} />
           <Route path="/hoteles" element={<Hotels/>} />
-          <Route path="/results" element={<Results/>} />
+          <Route path="/vuelos" element={<Results/>} />
           <Route path="/login" element={<LogIn/>} />
           <Route path="/signup" element={<SignUp/>} />
            <Route path="/micuenta" element={<PrivateRoute><MyAccount/></PrivateRoute>}/>

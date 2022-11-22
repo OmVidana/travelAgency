@@ -1,13 +1,15 @@
 import styled from "styled-components";
+import NavBar from '../components/global/NavBar';
 import Button from "../components/global/Button";
 import Icon from "../components/global/Icon";
 import Input from "../components/global/Input";
-import signupimg from "../components/global/background.jpg";
+import signupimg from "../components/global/background3.jpg";
 import { FaFacebookF, FaInstagram, FaTwitter, FaGoogle } from "react-icons/fa";
 
 function Signup() {
   return (
     <Bodysign>
+      <NavBar/>
     <MainContainer>
       <WelcomeText>Sign Up</WelcomeText>
       <InputContainer>
@@ -50,9 +52,6 @@ function Signup() {
 const Bodysign = styled.body`
 background-image: url(${signupimg});
 background-size: cover;
-display: flex;
-justify-content: center;
-align-items: center;
 height: 100vh;
 width: 100vw;
 font-family: "Raleway", sans-serif;

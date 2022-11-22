@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export default function Input({ type, placeholder }) {
-  return <StyledInput type={type} placeholder={placeholder} />;
+  return <StyledInput type= {type} placeholder={placeholder} />;
 }
 
 const StyledInput = styled.input`

@@ -21,6 +21,8 @@ function Results(props) {
                     arrivalt={flight['tsalida']}
                     departuret={flight['tllegada']}
                     price={flight['precio']}
+                    fsalida={flight['fsalida']}
+                    fllegada={flight['fllegada']}
                 />
              ))}
             </div>

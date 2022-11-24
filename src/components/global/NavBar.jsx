@@ -18,10 +18,13 @@ function NavBar() {
                             <a className="navBar-space-page" href="/hoteles"><i className="navBar-icons fa-solid fa-hotel"></i>Hoteles</a>
                         </li>
                         <li>
+                            {user ?  "" : 
                             <a className="navBar-space-page" href="/signup"><i className="navBar-icons fa-solid fa-user"></i>Sign Up</a>
+                            
+                            }
                         </li>
                     </ul>
-                    {user ? <a className='login-button' href='/micuenta'>{user.username}</a> : <a className='login-button' href='/login'>Log In</a>}
+                    {user ?  <a className='login-button' href='/micuenta'>{user.username}</a> : <a className='login-button' href='/login'>Log In</a>}
                     {/*<a className='login-button' href='/login'>Log In</a>*/}
                 </div>
             </nav>

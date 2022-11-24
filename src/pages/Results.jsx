@@ -23,6 +23,7 @@ function Results(props) {
                     price={flight['precio']}
                     fsalida={flight['fsalida']}
                     fllegada={flight['fllegada']}
+                    type= {true}
                 />
              ))}
             </div>

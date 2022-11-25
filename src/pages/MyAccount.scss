@@ -9,7 +9,7 @@
     justify-content: center;
         
     .account-container {
-        width: 700px;
+        width: 60%;
         height: 500px;
         display: flex;
         flex-direction: column;
@@ -19,18 +19,20 @@
         border-radius: 20px;
         
         .user-icon {
-            font-size: 125px;
-            margin-bottom: 30px;
+            font-size: 120px;
+
         }
         
         form {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin: 5px 0;
 
             input {
-                width: 240px;
+                width: 50%;
                 height: 40px;
                 border: 1px solid $black;
                 border-radius: 10px;
@@ -39,7 +41,7 @@
             }
             
             .modify-button {
-                width: 250px;
+                width: 60%;
                 height: 50px;
                 background-color: $main-blue;
                 color: $main-white;
@@ -53,11 +55,106 @@
         }
 
         .account-flights-hotels {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
             .account-consults {
                 text-decoration: none;
-                margin: 0 80px;
+                white-space: nowrap;
+                
             }
 
         }
     } 
+}
+
+@media (max-width: $computers) {
+    .account-flights-hotels {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .account-consults {
+            text-decoration: none;
+            white-space: nowrap;
+            
+        }
+    }
+}
+
+@media (max-width: $phones) {
+    .account-page {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+            
+        .account-container {
+            width: 60%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $main-white;
+            border-radius: 20px;
+            
+            .user-icon {
+                font-size: 100px;
+                margin-bottom: 10px;
+            }
+            
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+                input {
+                    width: 60%;
+                    height: 40px;
+                    border: 1px solid $black;
+                    border-radius: 10px;
+                    padding-left: 20px;
+                    margin: 10px 0px;
+                }
+                
+                .modify-button {
+                    width: 65%;
+                    height: 40px;
+                    background-color: $main-blue;
+                    color: $main-white;
+                    border-style: none;
+                    border-radius: 20px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    font-size: 12pt;
+                    cursor: pointer;
+                }
+            }
+    
+            .account-flights-hotels {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+    
+                .account-consults {
+                    text-decoration: none;
+                    white-space: nowrap;
+                    font-size: 10pt;
+                    margin: 5px 0;
+                    
+                }
+    
+            }
+        } 
+    }
 }

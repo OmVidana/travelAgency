@@ -4,6 +4,12 @@
 /*    overflow: hidden;*/
 /*}*/
 
+$phones: 300px;
+$tablet: 600px;
+$landscape: 768px;
+$laptops: 992px;
+$large: 1200px;
+
 .home-page{
 
     overflow: hidden;
@@ -25,6 +31,7 @@
         min-height: 700px;
         border-radius: 50px;
         box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+        margin-bottom: 5%;
 
 
         h2 {

@@ -85,6 +85,31 @@
         }
     }
 
+    @media (max-width: 480px) {
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+
+        .flight-origin {
+            width: 100%;
+            padding: 10px 20px;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .flight-destination {
+            width: 100%;
+            padding: 10px 20px;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .flight-price {
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
 
 }
     .flight-container:hover{

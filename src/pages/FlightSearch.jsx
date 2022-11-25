@@ -1,5 +1,5 @@
 import NavBar from "../components/global/NavBar";
-import "./FlightSearch.css";
+import "./FlightSearch.scss";
 import React, { useState } from "react";
 import Field from "../components/Search/Field";
 // import OptionField from "../components/Search/OptionField";
@@ -58,64 +58,28 @@ function Home(props) {
         <div className="home-page">
             <NavBar />
             <Loader flag={loading} />
-            <main>
-                <h2>Buscar Vuelo</h2>
+            <div id='cont'>
+                <main>
+                    <h2>Buscar Vuelo</h2>
                 <form>
-                    <div id="main__search">
-                        <div id="main__search">
-                            {/*<Field text="Salida" type="text" state= {setTitle} />*/}
-                            <OptionField text="Salida" state={setTitle} />
-                            <div className="svg-cont">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="arrows"
-                                    width="44"
-                                    height="44"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="#A8A8A8"
-                                    fill="none"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path
-                                        stroke="none"
-                                        d="M0 0h24v24H0z"
-                                        fill="none"
-                                    />
-                                    <line x1="21" y1="17" x2="3" y2="17" />
-                                    <path d="M6 10l-3 -3l3 -3" />
-                                    <line x1="3" y1="7" x2="21" y2="7" />
-                                    <path d="M18 20l3 -3l-3 -3" />
-                                </svg>
-                            </div>
-                            <OptionField text="Llegada" state={setLLegada} />
-                        </div>
-                        <button id="search" onClick={handleClick}>
-                            Buscar
-                        </button>
-                    </div>
-                    <div id="flight__options">
-                        <h3>Solo ida</h3>
-                        <h3>Ida y vuelta</h3>
-                    </div>
-                    <div id="extra__options">
-                        <h3>Busqueda Avanzada</h3>
-                        <div id="options">
-                            <Field
-                                text="Fecha de salida"
-                                type="date"
-                                state={setfIda}
-                            />
-                            <Field
-                                text="Adultos"
-                                type="text"
-                                state={setAdultos}
-                            />
-                        </div>
-                    </div>
-                </form>
-            </main>
+                    <OptionField text="Salida" state={setTitle} />
+                    <OptionField text="Llegada" state={setLLegada} />
+                        <Field
+                            text="Fecha de salida"
+                            type="date"
+                            state={setfIda}
+                        />
+                        <Field
+                            text="Adultos"
+                            type="text"
+                            state={setAdultos}
+                        />
+                    <button id="search" onClick={handleClick}>
+                        Buscar
+                    </button>
+                    </form>
+                </main>
+            </div>
         </div>
     );
 }

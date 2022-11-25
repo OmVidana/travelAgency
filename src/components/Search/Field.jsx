@@ -1,4 +1,4 @@
-// import './FlightSearch.css'
+// import './FlightSearch.scss'
 import React, { useState } from 'react';
 
 

@@ -9,6 +9,9 @@
     height: 250px;
     width: 750px;
     background-color: $main-white;
+    transition: transform .2s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
 
     .flight-origin {
         display: flex;
@@ -73,6 +76,42 @@
             margin-top: 10px;
             font-size: 10pt;
             cursor: pointer;
+            transition: transform .2s;
+
+        }
+
+        .flight-button:hover {
+            transform: scale(1.1);
         }
     }
+
+    @media (max-width: 480px) {
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+
+        .flight-origin {
+            width: 100%;
+            padding: 10px 20px;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .flight-destination {
+            width: 100%;
+            padding: 10px 20px;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .flight-price {
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
 }
+    .flight-container:hover{
+        transform: scale(1.1);
+    }

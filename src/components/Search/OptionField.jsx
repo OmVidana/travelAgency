@@ -1,4 +1,4 @@
-// import './FlightSearch.css'
+// import './FlightSearch.scss'
 import React, { useState } from 'react';
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 function OptionField(props) {
     
 
-    const [title, setTitle] = useState(['Si', 'No'])
+    const [title, setTitle] = useState([])
 
     function handleChange(event, value) {
             // console.log(event.target.value)

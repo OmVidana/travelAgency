@@ -10,6 +10,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import { redirect } from "react-router-dom";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Loader from "../components/global/Loader"
 
 function Home(props) {
     const [title, setTitle] = useState("");
@@ -19,6 +20,7 @@ function Home(props) {
     const [aerolinea, setAerolinea] = useState("None");
     const [adultos, setAdultos] = useState("None");
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
 
 
     let jsonData1 = {
@@ -34,6 +36,7 @@ function Home(props) {
 
 
     function handleClick(event) {
+        setLoading(true)
         let formData = new FormData();
         event.preventDefault();
         formData.append("json1", JSON.stringify(jsonData1));
@@ -54,6 +57,7 @@ function Home(props) {
     return (
         <div className="home-page">
             <NavBar />
+            <Loader flag={loading} />
             <main>
                 <h2>Buscar Vuelo</h2>
                 <form>

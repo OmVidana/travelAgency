@@ -34,6 +34,7 @@ function AccountFlights() {
             {data.map((flight, index) => (
                 <FlightCard
                     key={index}
+                    id={flight["id"]}
                     arrival={flight['Salida']}
                     departure={flight['Llegada']}
                     arrivalt={flight['Tiempo_llegada'].slice(0,-1).split('T')[1].slice(0,-3)}

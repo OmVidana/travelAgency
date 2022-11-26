@@ -8,11 +8,11 @@ function NavBar() {
     return (
         <div className="navBar">
             <div className="navBar-space-title">
-                <a className="navBar-space-main" href="/">
+                <a className="navBar-space-main">
                     Yorick Travels{" "}
                     <i className="navBar-main-icon fa-solid fa-plane-up"></i>
-                    <i class="navBar-responsive-button fa-solid fa-xmark"></i>
-                    <i class="navBar-responsive-button fa-solid fa-bars"></i>
+                    <i className="navBar-responsive-button fa-solid fa-xmark"></i>
+                    <i className="navBar-responsive-button fa-solid fa-bars"></i>
                 </a>
             </div>
             <div className="navBar-space-content">

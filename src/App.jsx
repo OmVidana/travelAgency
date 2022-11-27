@@ -16,6 +16,7 @@ import AccountHotels from "./pages/AccountHotels";
 import {AuthProvider} from './context/AuthContext'
 import FlightSearch from "./pages/FlightSearch";
 import Loader from "./components/global/Loader"
+import LogIn2 from "./pages/LogIn2";
 
 function App() {
   return (
@@ -26,11 +27,11 @@ function App() {
           <Route path="/hoteles" element={<Hotels/>} />
           <Route path="/results" element={<Results/>} />
           <Route path="/login" element={<LogIn/>} />
-          <Route path="/signup" element={<SignUp/>} />
+          {/*<Route path="/signup" element={<SignUp/>} />*/}
            <Route path="/micuenta" element={<PrivateRoute><MyAccount/></PrivateRoute>}/>
-          <Route path="/micuenta/vuelos" element={<AccountFlights/>} />
-          <Route path="/micuenta/hoteles" element={<AccountHotels/>} />
-          <Route path="/prueba" element={<Loader flag={true} />} />
+          <Route path="/micuenta/vuelos" element={<PrivateRoute><AccountFlights/></PrivateRoute>} />
+          <Route path="/micuenta/hoteles" element={<PrivateRoute><AccountHotels/></PrivateRoute>} />
+          <Route path="/signup" element={<LogIn2/>} />
         </Routes>
         </AuthProvider>
       </BrowserRouter>

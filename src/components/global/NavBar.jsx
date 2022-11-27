@@ -4,6 +4,8 @@ import AuthContext from "../../context/AuthContext";
 
 function NavBar() {
     let { user } = useContext(AuthContext);
+    let {logoutUser} = useContext(AuthContext)
+
     console.log(user);
     return (
         <div className="navBar">
@@ -25,11 +27,11 @@ function NavBar() {
                     Hoteles
                 </a>
                 {user ? (
-                    <a className="navBar-space-page" href="/signup">
+                    <a className="navBar-space-page" onClick={logoutUser} href="/login">
                         <i className="navBar-icons fa-solid fa-user"></i>Cerrar Sesión
                     </a>
                 ) : (
-                    <a className="navBar-space-page" href="/">
+                    <a className="navBar-space-page" href="/" >
                         <i className="navBar-icons fa-solid fa-user"></i>Sign Up
                     </a>
                 )}

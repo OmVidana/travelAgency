@@ -4,8 +4,8 @@ import "./MyAccount.scss";
 function MyAccount() {
     return (
         <>
-            <NavBar/>
             <div className="account-page">
+                <NavBar/>
                 <div className="account-container">
                     <i className="fa-solid fa-circle-user user-icon"></i>
                     <form>

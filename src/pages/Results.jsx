@@ -11,8 +11,8 @@ function Results(props) {
 
     return (
         <>
-            <NavBar/>
             <div className='results-page'>   
+                <NavBar/>
             {data.map((flight, index) => (
                 <FlightCard
                     key={index}

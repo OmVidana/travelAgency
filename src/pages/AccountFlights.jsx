@@ -29,8 +29,8 @@ function AccountFlights() {
 
     return (
         <>    
-            <NavBar/>
             <div className="accountflights-page">
+            <NavBar/>
             {data.map((flight, index) => (
                 <FlightCard
                     key={index}

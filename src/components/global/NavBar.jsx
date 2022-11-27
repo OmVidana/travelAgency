@@ -10,7 +10,7 @@ function NavBar() {
     return (
         <div className="navBar">
             <div className="navBar-space-title">
-                <a className="navBar-space-main" href="/">
+                <a className="navBar-space-main">
                     Yorick Travels{" "}
                     <i className="navBar-main-icon fa-solid fa-plane-up"></i>
                     <i className="navBar-responsive-button fa-solid fa-xmark"></i>

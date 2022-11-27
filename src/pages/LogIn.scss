@@ -1,63 +1,130 @@
 @import '../index.scss';
 
-.login-page {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../../public/loginbg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    .login-container {
-        width: 400px;
-        height: 450px;
+@media (min-width: $computers) {
+    .login-page {
         display: flex;
+        width: 100vw;
+        height: 100vh;
         align-items: center;
         justify-content: center;
-        background-color: $main-white;
-        border-style: none;
-        border-radius: 25px;
-
-        .login-form {
-            width: 100%;
-            height: 100%;
+        background-image: url("../../public/loginbg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        .login-container {
+            width: 30%;
+            height: 70%;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            
-            
-            h1 {
-                margin-bottom: 50px;
-                color: $main-blue;
-                font-size: 30pt;
-            }
-            
-            input {
-                width: 240px;
-                height: 40px;
-                border: 1px solid $black;
-                border-radius: 10px;
-                padding-left: 20px;
-                margin: 10px 0px;
-            }
-
-            .login-button {
-                width: 250px;
-                height: 50px;
-                background-color: $main-blue;
-                color: $main-white;
-                border-style: none;
-                border-radius: 50px;
-                margin-top: 40px;
-                margin-bottom: 20px;
-                font-size: 20pt;
-                cursor: pointer;
+            background-color: $main-white;
+            border-style: none;
+            border-radius: 25px;
+            white-space: nowrap;
+    
+            .login-form {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                
+                h1 {
+                    margin-bottom: 10%;
+                    color: $main-blue;
+                    font-size: 40pt;
+                }
+                
+                input {
+                    width: 70%;
+                    height: 40px;
+                    border: 1px solid $black;
+                    border-radius: 10px;
+                    padding-left: 20px;
+                    margin: 2% 0%;
+                }
+    
+                .login-button {
+                    width: 80%;
+                    height: 50px;
+                    background-color: $main-blue;
+                    color: $main-white;
+                    border-style: none;
+                    border-radius: 50px;
+                    margin-top: 5%;
+                    font-size: 20pt;
+                    cursor: pointer;
+                }
             }
         }
     }
 }
+
+@media (max-width: $computers) {
+    .login-page {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../../public/loginbg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        .login-container {
+            width: 55%;
+            height: 375px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $main-white;
+            border-style: none;
+            border-radius: 25px;
+            white-space: nowrap;
+    
+            .login-form {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                
+                h1 {
+                    margin-bottom: 10px;
+                    color: $main-blue;
+                    font-size: 25pt;
+                }
+                
+                input {
+                    width: 65%;
+                    height: 45px;
+                    border: 1px solid $black;
+                    border-radius: 10px;
+                    padding-left: 20px;
+                    margin: 10px 0px;
+                    font-size: 10pt;
+                }
+    
+                .login-button {
+                    width: 70%;
+                    height: 45px;
+                    background-color: $main-blue;
+                    color: $main-white;
+                    border-style: none;
+                    border-radius: 50px;
+                    margin: 20px 0;
+                    font-size: 15pt;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
     

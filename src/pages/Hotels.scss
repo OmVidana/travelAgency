@@ -1,14 +1,19 @@
 @import '../index.scss';
 
 .hotels-search-view {
-  //width: 70%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 
-
+  h1 {
+    font-size: 18pt;
+    margin: 5px 0;
+  }
+  
   p {
+    font-size: 12pt;
     margin: 5px 0;
   }
 
@@ -31,10 +36,19 @@
   .dates {
     display: flex;
     justify-content: space-between;
+
+    p {
+      font-style: italic;
+
+    }
+  }
+  .price {
+    font-size: 16pt;
+    color: $main-blue;
+    font-weight: 900;
   }
 
-
-  .flight-button {
+  .hotel-button {
     width: 120px;
     height: 40px;
     background-color: $main-blue;
@@ -48,7 +62,7 @@
 
   }
 
-  .flight-button:hover {
+  .hotel-button:hover {
     transform: scale(1.1);
   }
 

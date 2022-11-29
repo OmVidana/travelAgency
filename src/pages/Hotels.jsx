@@ -11,8 +11,8 @@ function Hotels() {
   const { offers } = state;
   return (
     <>
-      <NavBar></NavBar>
       <div className="hotels-search-view">
+        <NavBar/>
         {offers.map((data, key) => (
           <HotelCard
             key={key}

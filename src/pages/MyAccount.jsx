@@ -16,7 +16,7 @@ function MyAccount() {
     }
     console.log(event.target.editEmail);
     let formData = JSON.stringify({
-      username: event.target.editName.value,
+      username: user.username,
       email: event.target.editEmail.value,
       password: event.target.editPwd.value,
     });
@@ -47,7 +47,7 @@ function MyAccount() {
               name="editEmail"
               required
             />
-            <input type="text" placeholder="Nombre" name="editName" required />
+            {/* <input type="text" placeholder="Nombre" name="editName" required /> */}
             <input
               type="password"
               placeholder="Contraseña"

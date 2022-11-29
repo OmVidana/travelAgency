@@ -1,23 +1,24 @@
 import "./NavBar.scss";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import AuthContext from "../../context/AuthContext";
 
 function NavBar() {
     let { user } = useContext(AuthContext);
     let {logoutUser} = useContext(AuthContext)
-
+    const [isMobile, setIsMobile] = useState(true);
     console.log(user);
     return (
         <div className="navBar">
             <div className="navBar-space-title">
-                <a className="navBar-space-main">
+                <h1 className="navBar-space-main">
                     Yorick Travels{" "}
                     <i className="navBar-main-icon fa-solid fa-plane-up"></i>
-                    <i className="navBar-responsive-button fa-solid fa-xmark"></i>
-                    <i className="navBar-responsive-button fa-solid fa-bars"></i>
-                </a>
-            </div>
-            <div className="navBar-space-content">
+                </h1>
+                <button className="navBar-responsive-button" onClick={() => setIsMobile(!isMobile)}>
+                    {isMobile ? <i className="navBar-responsive-button fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
+                </button>
+            </div>            
+            <div className={isMobile ? "navBar-space-content" : "navBar-space-content-2"}>
                 <a className="navBar-space-page" href="/">
                     <i className="navBar-icons fa-sharp fa-solid fa-house"></i>
                     Home

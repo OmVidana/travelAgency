@@ -12,7 +12,7 @@ function LogIn() {
                     <h1>Log In</h1>
                     <input
                         type="text"
-                        placeholder="Correo"
+                        placeholder="User"
                         name="email"
                         required
                     />

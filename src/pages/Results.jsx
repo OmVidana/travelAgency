@@ -16,8 +16,8 @@ function Results(props) {
             {data.map((flight, index) => (
                 <FlightCard
                     key={index}
-                    arrival={flight['salida']}
-                    departure={flight['llegada']}
+                    arrival={flight['llegada']}
+                    departure={flight['salida']}
                     arrivalt={flight['tsalida']}
                     departuret={flight['tllegada']}
                     price={flight['precio']}

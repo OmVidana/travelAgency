@@ -20,8 +20,8 @@ function HotelSearch(props) {
 
     console.log("t");
     // Send data to the backend via POST
-    // fetch(`http://127.0.0.1:8000/cityHotels/${salida.split(',')[0]}`, {
-    fetch(`http://127.0.0.1:8000/cityHotels/GDL`, {
+    fetch(`http://127.0.0.1:8000/cityHotels/${salida.split(',')[0]}`, {
+    // fetch(`http://127.0.0.1:8000/cityHotels/GDL`, {
       method: "POST",
       mode: "cors",
       headers: {

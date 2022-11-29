@@ -28,6 +28,9 @@ function Hotels() {
               " " +
               data.offers[0].room.typeEstimated.bedType
             }
+            price={
+              data.offers[0].price.total + " " + data.offers[0].price.currency
+            }
             type={true}
           ></HotelCard>
         ))}

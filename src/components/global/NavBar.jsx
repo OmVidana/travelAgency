@@ -41,13 +41,13 @@ function NavBar() {
             <i className="navBar-icons fa-solid fa-user"></i>Cerrar Sesión
           </a>
         ) : (
-          <a className="navBar-space-page" href="/">
+          <a className="navBar-space-page" href="/signup">
             <i className="navBar-icons fa-solid fa-user"></i>Sign Up
           </a>
         )}
         {user ? (
           <a className="login-button" href="/micuenta">
-            {user.username}
+            {user.email}
           </a>
         ) : (
           <a className="login-button" href="/login">

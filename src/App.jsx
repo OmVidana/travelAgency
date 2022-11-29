@@ -17,6 +17,7 @@ import {AuthProvider} from './context/AuthContext'
 import FlightSearch from "./pages/FlightSearch";
 import Loader from "./components/global/Loader"
 import LogIn2 from "./pages/LogIn2";
+import HotelSearch from "./pages/HotelSearch";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <AuthProvider>
         <Routes>
           <Route path="/" element={<FlightSearch/>} />
-          <Route path="/hoteles" element={<Hotels/>} />
+          <Route path="/hoteles" element={<HotelSearch/>} />
           <Route path="/results" element={<Results/>} />
           <Route path="/login" element={<LogIn/>} />
           {/*<Route path="/signup" element={<SignUp/>} />*/}

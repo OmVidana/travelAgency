@@ -1,75 +1,93 @@
 @import '../index.scss';
 
-.hotels-page {
-    width: 100vw;
+//.hotels-page {
+//    width: 100vw;
+//
+//    .hotels-container {
+//        height: 100%;
+//        width: 100%;
+//        display: flex;
+//        justify-content: flex-end;
+//        white-space: nowrap;
+//
+//        .hotels-search-bar {
+//            width: 25%;
+//            height: calc(100vh - 120px);
+//            display: flex;
+//            flex-direction: column;
+//            align-items: center;
+//            justify-content: center;
+//            margin-right: 2.75%;
+//            background-color: $main-white;
+//            border-radius: 20px;
+//            position: sticky;
+//            top: 100px;
+//
+//            h1 {
+//                font-size: 16pt;
+//                margin-bottom: 5%;
+//            }
+//
+//            .hotels-search-form {
+//                width: 100%;
+//                display: flex;
+//                flex-direction: column;
+//                align-items: center;
+//                justify-content: center;
+//
+//                input {
+//                    width: 65%;
+//                    height: 40px;
+//                    border: 1px solid $black;
+//                    border-radius: 5px;
+//                    padding-left: 20px;
+//                    margin: 2% 0%;
+//
+//                }
+//
+//                select {
+//                    width: 65%;
+//                    height: 40px;
+//                    border: 1px solid $black;
+//                    border-radius: 5px;
+//                    padding-left: 20px;
+//                    margin: 2% 0%;
+//
+//                }
+//
+//                .hotels-search-button {
+//                    width: 75%;
+//                    height: 50px;
+//                    background-color: $main-blue;
+//                    color: $main-white;
+//                    border-style: none;
+//                    border-radius: 50px;
+//                    margin-top: 5%;
+//                    font-size: 20pt;
+//                    cursor: pointer;
+//                }
+//            }
+//        }
+//
+//        .hotels-search-view {
+//            width: 70%;
+//            display: flex;
+//            flex-direction: column;
+//            align-items: center;
+//            justify-content: flex-start;
+//
+//            .hotel-preview {
+//                width: 85%;
+//                height: 200px;
+//                background-color: $main-white;
+//                border-radius: 20px;
+//                margin: 2.5% 0;
+//            }
+//        }
+//    }
+//}
 
-    .hotels-container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        white-space: nowrap;
-        
-        .hotels-search-bar {
-            width: 25%;
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-right: 2.75%;
-            background-color: $main-white;
-            border-radius: 20px;
-            position: sticky;
-            top: 100px;
-
-            h1 {
-                font-size: 16pt;
-                margin-bottom: 5%;
-            }
-
-            .hotels-search-form {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                input {
-                    width: 65%;
-                    height: 40px;
-                    border: 1px solid $black;
-                    border-radius: 5px;
-                    padding-left: 20px;
-                    margin: 2% 0%;
-
-                }
-
-                select {
-                    width: 65%;
-                    height: 40px;
-                    border: 1px solid $black;
-                    border-radius: 5px;
-                    padding-left: 20px;
-                    margin: 2% 0%;
-
-                }
-
-                .hotels-search-button {
-                    width: 75%;
-                    height: 50px;
-                    background-color: $main-blue;
-                    color: $main-white;
-                    border-style: none;
-                    border-radius: 50px;
-                    margin-top: 5%;
-                    font-size: 20pt;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .hotels-search-view {
+.hotels-search-view {
             width: 70%;
             display: flex;
             flex-direction: column;
@@ -84,5 +102,3 @@
                 margin: 2.5% 0;
             }
         }
-    }
-}

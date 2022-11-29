@@ -54,10 +54,15 @@ function HotelSearch(props) {
           <div className="hotels-search-bar">
             <h2>Búsqueda de Hotel</h2>
             <form className="hotels-search-form" onSubmit={handleClick}>
-              <OptionField text={"si"} state={setSalida}></OptionField>
-              <input type="text" placeholder="Adultos" name="ciudad" />
-              <input type="date" name="Llegada" />
-              <input type="date" name="Salida" />
+              <OptionField text={"Ciudad"} state={setSalida}></OptionField>
+              <input
+                className="nm"
+                type="text"
+                placeholder="Adultos"
+                name="ciudad"
+              />
+              <input className="nm" type="date" name="Llegada" />
+              <input className="nm" type="date" name="Salida" />
               <button className="hotels-search-button" type="submit">
                 Buscar
               </button>

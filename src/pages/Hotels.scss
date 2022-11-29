@@ -14,8 +14,9 @@
 
   .hotel-preview {
     width: 55%;
-    height: 200px;
+    //height: 200px;
     background-color: $main-white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 20px;
     margin: 2.5% 0;
     padding: 50px;
@@ -40,7 +41,7 @@
     color: $main-white;
     border-style: none;
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 10pt;
     cursor: pointer;
     transition: transform .2s;
@@ -49,6 +50,24 @@
 
   .flight-button:hover {
     transform: scale(1.1);
+  }
+
+  @media (max-width: 480px) {
+
+    //background-color: white;
+    .hotel-preview {
+      //height: calc(100vh - 60px);
+      //box-shadow: none;
+      margin: 20px 0;
+      width: 90%;
+      padding: 20px;
+
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
   }
 }
 

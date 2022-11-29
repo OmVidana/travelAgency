@@ -2,190 +2,192 @@
 
 
 @media (min-width: $computers) {
-    .navBar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100vw;
-        height: 60px;
-        position: sticky;
-        background-color: $main-white;
-        top: 0;
-        box-shadow: 0 0.2rem 0.3rem -0.2rem rgba($color: $black, $alpha: 0.5);
-        font-size: 18pt;
-        
-        .navBar-space-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 25%;
-            
-            .navBar-space-main {
-                font-size: 20pt;
-                white-space: nowrap;
-                color: $black;
-                
-                .navBar-main-icon {
-                    margin-left: 1rem;
-                }
+  .navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 60px;
+    position: sticky;
+    background-color: $main-white;
+    top: 0;
+    box-shadow: 0 0.2rem 0.3rem -0.2rem rgba($color: $black, $alpha: 0.5);
+    font-size: 18pt;
+    //z-index: 50;
 
-            }
+    .navBar-space-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 25%;
 
-            .navBar-responsive-button {
-                display: none;
-                margin-left: 2rem;
-            }
+      .navBar-space-main {
+        font-size: 20pt;
+        white-space: nowrap;
+        color: $black;
 
-        }
-        .navBar-space-content-2 {
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            width: 75%;
-                
-            .navBar-space-page {
-                text-decoration: none;
-                color: $light-black;
-                white-space: nowrap;
-                
-                .navBar-icons {
-                    color: $light-black;
-                    margin-left: 2rem;
-                    margin-right: 1rem;
-                }
-            }
-            
-            .login-button {
-                text-decoration: none;
-                white-space: nowrap;
-                color: $light-black;
-                padding: 5px 30px;
-                border: 0.2rem solid $main-blue;
-                border-radius: 2rem;
-                margin: 0 30px;
-            }
+        .navBar-main-icon {
+          margin-left: 1rem;
         }
 
-        .navBar-space-content {
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            width: 75%;
-                
-            .navBar-space-page {
-                text-decoration: none;
-                color: $light-black;
-                white-space: nowrap;
-                
-                .navBar-icons {
-                    color: $light-black;
-                    margin-left: 2rem;
-                    margin-right: 1rem;
-                }
-            }
-            
-            .login-button {
-                text-decoration: none;
-                white-space: nowrap;
-                color: $light-black;
-                padding: 5px 30px;
-                border: 0.2rem solid $main-blue;
-                border-radius: 2rem;
-                margin: 0 30px;
-            }
-        }
+      }
+
+      .navBar-responsive-button {
+        display: none;
+        margin-left: 2rem;
+      }
 
     }
+
+    .navBar-space-content-2 {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      width: 75%;
+
+      .navBar-space-page {
+        text-decoration: none;
+        color: $light-black;
+        white-space: nowrap;
+
+        .navBar-icons {
+          color: $light-black;
+          margin-left: 2rem;
+          margin-right: 1rem;
+        }
+      }
+
+      .login-button {
+        text-decoration: none;
+        white-space: nowrap;
+        color: $light-black;
+        padding: 5px 30px;
+        border: 0.2rem solid $main-blue;
+        border-radius: 2rem;
+        margin: 0 30px;
+      }
+    }
+
+    .navBar-space-content {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      width: 75%;
+
+      .navBar-space-page {
+        text-decoration: none;
+        color: $light-black;
+        white-space: nowrap;
+
+        .navBar-icons {
+          color: $light-black;
+          margin-left: 2rem;
+          margin-right: 1rem;
+        }
+      }
+
+      .login-button {
+        text-decoration: none;
+        white-space: nowrap;
+        color: $light-black;
+        padding: 5px 30px;
+        border: 0.2rem solid $main-blue;
+        border-radius: 2rem;
+        margin: 0 30px;
+      }
+    }
+
+  }
 }
 
 @media (max-width: $computers) {
-    .navBar {
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    position: sticky;
+    background-color: $main-white;
+    top: 0;
+    box-shadow: 0 0.2rem 0.3rem -0.2rem rgba($color: $black, $alpha: 0.5);
+
+    .navBar-space-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      width: 100%;
+
+      .navBar-space-main {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100vw;
+        text-decoration: none;
+        white-space: nowrap;
+        color: $black;
         height: auto;
-        position: sticky;
-        background-color: $main-white;
-        top: 0;
-        box-shadow: 0 0.2rem 0.3rem -0.2rem rgba($color: $black, $alpha: 0.5);
-        
-        .navBar-space-title {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 5%;
-            width: 100%;
+        font-size: 20pt;
+        margin: 1rem 0;
 
-            .navBar-space-main {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
-                white-space: nowrap;
-                color: $black;
-                height: auto;
-                font-size: 20pt;
-                margin: 1rem 0;
-                
-                .navBar-main-icon {
-                    margin-left: 1rem;
-                }
- 
-            } 
-
-            .navBar-responsive-button { 
-                background: transparent;
-                border: none;
-                cursor: pointer;
-                font-size: 20pt;
-            }
-
+        .navBar-main-icon {
+          margin-left: 1rem;
         }
 
-        .navBar-space-content-2 {
-            display: none;
+      }
 
-        }
+      .navBar-responsive-button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 20pt;
+      }
 
-        .navBar-space-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            margin-bottom: 10px;
-                
-            .navBar-space-page {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
-                color: $light-black;
-                white-space: nowrap;
-                width: 100%;
-                height: 40px;
-                font-size: 15pt;
-
-                .navBar-icons {
-                    display: none;
-                }
-            }
-            
-            .login-button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
-                white-space: nowrap;
-                font-size: 15pt;
-                font-weight: bolder;
-                color: $light-black;
-                width: 100%;
-                height: 40px;
-            }
-        }
     }
+
+    .navBar-space-content-2 {
+      display: none;
+
+    }
+
+    .navBar-space-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 10px;
+
+      .navBar-space-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $light-black;
+        white-space: nowrap;
+        width: 100%;
+        height: 40px;
+        font-size: 15pt;
+
+        .navBar-icons {
+          display: none;
+        }
+      }
+
+      .login-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        white-space: nowrap;
+        font-size: 15pt;
+        font-weight: bolder;
+        color: $light-black;
+        width: 100%;
+        height: 40px;
+      }
+    }
+  }
 }

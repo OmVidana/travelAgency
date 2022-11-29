@@ -47,7 +47,7 @@ function NavBar() {
         )}
         {user ? (
           <a className="login-button" href="/micuenta">
-            {user.email}
+            {user.username}
           </a>
         ) : (
           <a className="login-button" href="/login">

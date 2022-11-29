@@ -24,15 +24,19 @@ export const AuthProvider = ({children})=> {
             .then((response)=> {
                 let data = response.json()
                 if(response.status === 200){
+                    console.log("Si el primero")
+                    console.log(data)
                     data.then((values) => {
                         setAuthTokens(values)
                         setUser(jwtDecode(values.access))
+                        // console.log(user)
                         localStorage.setItem('authTokens', JSON.stringify(values))
                         navigate('/')
                     })
                 }else{
                     alert('Something went wrong!')
                 }
+                console.log(user)
             })
         // let data = (await response).json()
 

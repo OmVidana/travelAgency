@@ -57,16 +57,16 @@ function HotelCard(props) {
 
   return (
     <div className="hotel-preview">
-      <p>{props.name}</p>
+      <h1>{props.name}</h1>
       <div className="dates">
         <p>{props.checkIn}</p>
         <p>{props.checkOut}</p>
       </div>
       <p>{props.info}</p>
-      <p>{props.price}</p>
+      <p className="price">{props.price}</p>
       {props.type ? (
         <button
-          className="buy-button flight-button"
+          className="buy-button hotel-button"
           type="button"
           onClick={handleBuy}
         >
@@ -74,7 +74,7 @@ function HotelCard(props) {
         </button>
       ) : (
         <button
-          className="cancel-button flight-button"
+          className="cancel-button hotel-button"
           type="button"
           onClick={handleDel}
         >

@@ -85,7 +85,29 @@
         }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: $computers) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        height: 250px;
+        width: 75%;
+        background-color: $main-white;
+        transition: transform .2s;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        .flight-price {
+            
+            p {
+                color: $main-blue;
+                font-size: 14pt;
+                font-weight: 900;
+            }
+        }
+    }
+
+    @media (max-width: $phones) {
         max-width: 300px;
         flex-direction: column;
         height: auto;

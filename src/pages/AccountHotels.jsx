@@ -25,8 +25,8 @@ function AccountHotels() {
 
   return (
     <>
-      <NavBar />
       <div className="hotels-search-view">
+        <NavBar />
         {data.map((hotel, index) => (
           <HotelCard
             key={index}

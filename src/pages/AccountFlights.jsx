@@ -15,7 +15,6 @@ function AccountFlights() {
       mode: "cors",
     })
       .then((response) => response.json())
-      // .then(data => console.log(data['data']));
       .then((data) => {
         console.log(data);
         setData(data);

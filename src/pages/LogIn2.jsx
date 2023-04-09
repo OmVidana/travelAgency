@@ -15,7 +15,6 @@ function LogIn() {
                 'email':event.target.user.value,
                 'username':event.target.email.value ,
                 'password':event.target.pwd.value})
-        console.log(formdata)
         // Send data to the backend via POST
         fetch(' http://127.0.0.1:8000/users/', {
 
@@ -28,27 +27,6 @@ function LogIn() {
             let data = response.json()
             if(response.status === 200){
                 navigate("/login")
-                // console.log(event.target.user.value)
-                // console.log(event.target.pwd.value)
-                // let response = fetch('http://127.0.0.1:8000/api/token/', {
-                //     method:'POST',
-                //     headers:{
-                //         'Content-Type':'application/json'
-                //     },
-                //     body:JSON.stringify({'username':event.target.user.value, 'password':event.target.pwd.value})
-                //     })
-                //     .then((response)=> {
-                //         let data = response.json()
-                //         if(response.status === 200){
-                //             data.then((values) => {
-                //                 setAuthTokens(values)
-                //                 setUser(jwtDecode(values.access))
-                //                 localStorage.setItem('authTokens', JSON.stringify(values))
-                //                 navigate('/')
-                //             })
-                //         }else{
-                //             alert('Something went wrong 2!')
-                //         }
                 
             }else{
                 alert('Something went wrong 1!')

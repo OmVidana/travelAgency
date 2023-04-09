@@ -5,8 +5,6 @@ import { useLocation } from "react-router-dom";
 import "./Hotels.scss";
 
 function Hotels() {
-  // const [salida, setSalida] = useState('')
-  // const [offers, setOffers] = useState([0])
   const { state } = useLocation();
   const { offers } = state;
   return (

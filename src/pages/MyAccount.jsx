@@ -9,7 +9,6 @@ function MyAccount() {
   let { user } = useContext(AuthContext);
 
   function handleBuy(event, value) {
-    // console.log(event.target.value)
     event.preventDefault();
     if (!user) {
       navigate("/login");
@@ -29,8 +28,6 @@ function MyAccount() {
       headers: { "Content-Type": "application/json" },
       body: formData, // body data type must match "Content-Type" header
     }).then((response) => response.json());
-    // .then(data => console.log(data['data']));
-    // .then(data => setTitle(data['json1']));
     navigate("/");
   }
 

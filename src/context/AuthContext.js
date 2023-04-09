@@ -13,7 +13,6 @@ export const AuthProvider = ({children})=> {
     let navigate = useNavigate()
     let loginUser = async (e )=> {
         e.preventDefault()
-        console.log('Submiteada')
         let response = fetch('http://127.0.0.1:8000/api/token/', {
             method:'POST',
             headers:{
@@ -24,12 +23,9 @@ export const AuthProvider = ({children})=> {
             .then((response)=> {
                 let data = response.json()
                 if(response.status === 200){
-                    console.log("Si el primero")
-                    console.log(data)
                     data.then((values) => {
                         setAuthTokens(values)
                         setUser(jwtDecode(values.access))
-                        // console.log(user)
                         localStorage.setItem('authTokens', JSON.stringify(values))
                         navigate('/')
                     })

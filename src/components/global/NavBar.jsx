@@ -11,7 +11,7 @@ function NavBar() {
     <div className="navBar">
       <div className="navBar-space-title">
         <h1 className="navBar-space-main">
-          Yorick Travels{" "}
+          Up Travels{" "}
           <i className="navBar-main-icon fa-solid fa-plane-up"></i>
         </h1>
         <button
@@ -54,7 +54,6 @@ function NavBar() {
             Log In
           </a>
         )}
-        {/*<a className='login-button' href='/login'>Log In</a>*/}
       </div>
     </div>
   );

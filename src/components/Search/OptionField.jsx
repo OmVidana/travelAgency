@@ -28,18 +28,14 @@ function OptionField(props) {
   }
 
   return (
-    // <h1>FS</h1>
     <Autocomplete
       disablePortal
-      // className="inp"
       options={title}
       sx={{ width: 300 }}
       renderInput={(params) => <TextField {...params} label={props.text} />}
       onInputChange={handleChange}
       onChange={handle}
       disableClearable={true}
-      // onChange={event => props.state(event.target.value)}
-      // onChange={event => props.state(event.target.value)]
     />
   );
 }

@@ -1,8 +1,5 @@
 import NavBar from "../components/global/NavBar";
-// import "./FlightSearch.scss";
 import React, { useState } from "react";
-// import OptionField from "../components/Search/OptionField";
-// import {Autocomplete} from "@mui/material";
 import OptionField from "../components/Search/OptionField";
 import "./HotelSearch.scss";
 import { useNavigate } from "react-router-dom";
@@ -21,7 +18,6 @@ function HotelSearch(props) {
     console.log("t");
     // Send data to the backend via POST
     fetch(`http://127.0.0.1:8000/cityHotels/${salida.split(',')[0]}`, {
-    // fetch(`http://127.0.0.1:8000/cityHotels/GDL`, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -35,14 +31,9 @@ function HotelSearch(props) {
     })
       .then((response) => response.json())
       .then((data) => {
-        // setOffers(data['offers'])
-        // console.log(offers[0].hotel)
         console.log(data);
         navigate("/hotelResults", { state: data });
       });
-    // .then(data => console.log(data['data']));
-    //     .then(data => setTitle(data['json1']));
-    // return redirect("/home");
   }
 
   return (

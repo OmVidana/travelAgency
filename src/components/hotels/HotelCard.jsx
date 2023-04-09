@@ -7,7 +7,6 @@ function HotelCard(props) {
   let navigate = useNavigate();
 
   function handleBuy(event, value) {
-    // console.log(event.target.value)
     if (!user) {
       navigate("/login");
     }
@@ -28,13 +27,10 @@ function HotelCard(props) {
       headers: { "Content-Type": "application/json" },
       body: formData, // body data type must match "Content-Type" header
     }).then((response) => response.json());
-    // .then(data => console.log(data['data']));
-    // .then(data => setTitle(data['json1']));
     navigate("/micuenta/hoteles");
   }
 
   function handleDel(event, value) {
-    // console.log(event.target.value)
     if (!user) {
       navigate("/login");
     }
@@ -51,8 +47,6 @@ function HotelCard(props) {
     }).then((response) => response.json());
     navigate(0);
 
-    // .then(data => console.log(data['data']));
-    // .then(data => setTitle(data['json1']));
   }
 
   return (

@@ -8,14 +8,13 @@ function FlightCard(props) {
   let navigate = useNavigate();
 
   function handleBuy(event, value) {
-    // console.log(event.target.value)
     if (!user) {
       navigate("/login");
     }
     console.log(props);
     let formData = JSON.stringify({
       Usuario: user.username,
-      Aerolinea: "Yorick",
+      Aerolinea: "Up",
       Salida: props.departure,
       Llegada: props.arrival,
       Tiempo_salida: props.fsalida + " " + props.departuret,
@@ -55,8 +54,6 @@ function FlightCard(props) {
     }).then((response) => response.json());
     navigate(0);
 
-    // .then(data => console.log(data['data']));w
-    // .then(data => setTitle(data['json1']));
   }
 
   return (
@@ -64,15 +61,10 @@ function FlightCard(props) {
       <div className="flight-origin">
         <p id="dest">{props.departure}</p>
         <p id="arr">{props.arrival}</p>
-        {/*<img src='' alt='Airlane Logo'/>*/}
       </div>
-      {/*<div className='flight-arrow'>*/}
-      {/*    <span><i className="fa-solid fa-arrow-right-long"></i></span>*/}
-      {/*</div>*/}
       <div className="flight-destination">
         <p id="destime">{props.departuret}</p>
         <p id="destime">{props.arrivalt}</p>
-        {/*<img src='' alt='Airlane Logo'/>*/}
       </div>
       <div className="flight-price">
         <p>{props.price}</p>

@@ -5,7 +5,6 @@ import { useLocation } from 'react-router-dom';
 import NavBar from '../components/global/NavBar';
 
 function Results(props) {
-    // let data = props.data['data']
     const {state} = useLocation();
     const { data } = state;
 
